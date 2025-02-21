@@ -1,6 +1,5 @@
-import './index.css';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
-import { LanguageProvider } from './context/LanguageContext';
+import { useTheme } from './context/ThemeContext';
+import { useLanguage } from './context/LanguageContext';
 import Navbar from './components/NavBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -11,6 +10,10 @@ import Footer from './components/Footer';
 
 function App() {
   const { theme } = useTheme();
+  const { language } = useLanguage();
+
+  const greeting = language === 'en' ? 'Welcome to my portfolio!' : 'Portföyüme hoş geldiniz!';
+
   return (
     <div className={`min-h-screen pl-[20px] pr-[40px] pt-[10px] pb-[40px] ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
       <Navbar />
@@ -20,8 +23,8 @@ function App() {
       <Profile />
       <Projects />
       <Footer />
+      <h1>{greeting}</h1>
     </div>
-
   );
 }
 

@@ -1,5 +1,5 @@
-import { useLanguage } from "../context/LanguageContext";
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -9,6 +9,7 @@ const Navbar = () => {
     return (
         <nav className={`p-4 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
             <div className="flex justify-end items-center space-x-4">
+                {/* Tema Değiştirme Butonu */}
                 <label className="relative inline-flex items-center cursor-pointer">
                     <input
                         type="checkbox"
@@ -17,10 +18,13 @@ const Navbar = () => {
                         onChange={toggleTheme}
                         data-testid="darkMode-toggle"
                     />
-                    <div className="w-14 h-7 bg-gray-200 rounded-full peer-checked:bg-blue-600 transition-all"></div>
-
-                    <div className={`w-6 h-6 bg-white rounded-full absolute transition-all ${theme === 'dark' ? 'left-0' : 'left-7'}`}>
-                        <div className="flex justify-center items-center h-full w-full">
+                    {/* Arka plan (slider) */}
+                    <div className="w-14 h-7 bg-gray-200 rounded-full peer-checked:bg-blue-600 transition-all relative">
+                        {/* Ay ve Güneş ikonu */}
+                        <div
+                            className={`w-6 h-6 bg-white rounded-full absolute top-1 transition-all flex justify-center items-center 
+                            ${theme === 'dark' ? 'left-1' : 'left-7'}`}
+                        >
                             {theme === 'dark' ? (
                                 <FaMoon className="text-gray-800" />
                             ) : (
@@ -30,15 +34,17 @@ const Navbar = () => {
                     </div>
                 </label>
 
+                {/* Tema Metni */}
                 <span className={`text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
                     {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
                 </span>
 
                 <span className="text-gray-500">|</span>
 
+                {/* Dil Değiştirme Butonu */}
                 <button
                     onClick={toggleLanguage}
-                    className={`p-2 font-semibold ${language === 'tr' ? 'text-blue-500' : 'text-black'}`}
+                    className={`p-2 font-semibold transition-colors ${language === 'tr' ? 'text-blue-500' : 'text-black'}`}
                 >
                     {language === 'en' ? 'Türkçe' : 'English'}
                 </button>
