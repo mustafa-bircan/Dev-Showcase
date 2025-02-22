@@ -9,7 +9,7 @@ const Projects = () => {
 
     return (
         <div className="container mx-auto">
-            <h2 className="text-5xl font-bold text-left">Projects</h2>
+            <h2 className="text-5xl font-bold text-left">Projeler</h2>
             <div className="flex justify-between mt-12">
                 {data.map((project, index) => (
                     <div key={index} className="w-1/3 px-4">
@@ -66,7 +66,7 @@ const Projects = () => {
                                 rel="noopener noreferrer"
                                 className="text-base font-medium text-[#3730A3] underline"
                             >
-                                View Site
+                                Siteyi Görüntüle
                             </a>
                         </div>
                     </div>

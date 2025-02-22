@@ -46,12 +46,12 @@ const Profile = () => {
                 </div>
 
                 <div className="w-1/2">
-                    <h3 className={`text-3xl font-medium ${theme === 'dark' ? 'text-[#B7AAFF]' : 'text-[#4338CA]'}`}>About Me</h3>
+                    <h3 className={`text-3xl font-medium ${theme === 'dark' ? 'text-[#B7AAFF]' : 'text-[#4338CA]'}`}>Hakkımda</h3>
                     <div className="mt-4">
-                        <p className="font-normal text-lg mb-6">
+                        <p className="font-normal text-lg mb-6 text-[#6B7280]">
                             {data?.aboutMe || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
                         </p>
-                        <p className="font-normal text-lg">
+                        <p className="font-normal text-lg text-[#6B7280]">
                             {data?.aboutMe2 || 'Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!'}
                         </p>
                     </div>

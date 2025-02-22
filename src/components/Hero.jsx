@@ -27,7 +27,7 @@ const Hero = () => {
 
                 <div className="flex space-x-4 mt-6">
                     <button className="py-2 px-6 text-lg font-semibold text-white bg-[#3730A3] rounded-md">
-                        Hire Me
+                        Beni İşe Alın
                     </button>
 
                     <a

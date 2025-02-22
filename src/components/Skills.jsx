@@ -12,7 +12,7 @@ const Skills = () => {
     return (
         <div className={`p-8 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
             <h2 className={`text-5xl font-semibold ${theme === 'dark' ? 'text-[#AEBCCF]' : 'text-[#34371f]'} text-left`}>
-                Skills
+                Yetenekler
             </h2>
 
             <div className="flex gap-x-50 mt-8">
