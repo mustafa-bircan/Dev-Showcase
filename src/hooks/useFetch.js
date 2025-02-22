@@ -1,17 +1,23 @@
 import { useState, useEffect } from 'react';
 import api from '../services/api';
+import { useLanguage } from '../context/LanguageContext';
 
-const useFetch = (endpoint) => {
+const useFetch = (endpoint, dataKey) => {
+    const { language } = useLanguage();
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         setLoading(true);
-        api.get(endpoint)
+        const apiUrl = language === 'en'
+            ? 'https://67b8ffa951192bd378dc679d.mockapi.io/secure/SpDWa22/api/v1/showcase/en'
+            : 'https://67b8ffa951192bd378dc679d.mockapi.io/secure/SpDWa22/api/v1/showcase/data';
+
+        api.get(apiUrl)
             .then((response) => {
                 console.log(response.data);
-                setData(response.data[0]?.footer);
+                setData(dataKey ? response.data[0]?.[dataKey] : response.data);
                 setLoading(false);
             })
             .catch((err) => {
@@ -19,8 +25,7 @@ const useFetch = (endpoint) => {
                 setError(err.message);
                 setLoading(false);
             });
-    }, [endpoint]);
-
+    }, [endpoint, dataKey, language]);
 
     return { data, loading, error };
 };

@@ -36,7 +36,7 @@ const Navbar = () => {
                 </label>
 
                 <span className={`text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
-                    {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
+                    {theme === 'dark' ? 'AÇIK MOD' : 'KARANLIK MOD'}
                 </span>
 
                 <span className="text-gray-500">|</span>

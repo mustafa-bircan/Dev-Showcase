@@ -2,6 +2,7 @@ import { createContext, useState, useEffect, useContext } from "react";
 
 const LanguageContext = createContext();
 
+
 export const useLanguage = () => {
     return useContext(LanguageContext);
 };

@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className={`flex flex-col min-h-screen ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'} mt-5 ml-15 mr-30 mb-30`}>
+      <div className={`flex flex-col min-h-screen ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'} mt-5 ml-20 mr-30 mb-30`}>
         <Navbar />
         <Header />
         <Hero />

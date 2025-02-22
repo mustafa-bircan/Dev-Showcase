@@ -10,14 +10,14 @@ const Profile = () => {
     if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
     return (
-        <div className={`p-8 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
+        <div className={`${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
             <h2 className={`text-5xl font-semibold ${theme === 'dark' ? 'text-[#AEBCCF]' : 'text-[#1F2937]'} text-left`}>
-                Profile
+                Profil
             </h2>
 
             <div className="flex justify-between mt-8 space-x-8">
                 <div className="w-1/2">
-                    <h3 className={`text-3xl font-medium ${theme === 'dark' ? 'text-[#B7AAFF]' : 'text-[#4338CA]'}`}>Profile</h3>
+                    <h3 className={`text-3xl font-medium ${theme === 'dark' ? 'text-[#B7AAFF]' : 'text-[#4338CA]'}`}>Profil</h3>
                     <div className="mt-4 space-y-4">
                         <div className="flex">
                             <p className="font-semibold text-lg">Doğum Tarihi</p>

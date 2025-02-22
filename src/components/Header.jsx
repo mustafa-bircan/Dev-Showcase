@@ -15,15 +15,15 @@ const Header = () => {
 
             <nav className="flex space-x-5">
                 <button className={`py-2 px-4 text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-[#6B7280]'} `}>
-                    Skills
+                    Yetenekler
                 </button>
 
                 <button className={`py-2 px-4 text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-[#6B7280]'} `}>
-                    Projects
+                    Projeler
                 </button>
 
                 <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'text-white border-white' : 'text-[#3730A3] border-[#3730A3]'} border-opacity-50`}>
-                    Hire Me
+                    Beni İşe Alın
                 </button>
             </nav>
         </header>

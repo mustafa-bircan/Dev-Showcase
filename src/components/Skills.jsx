@@ -10,10 +10,11 @@ const Skills = () => {
     if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
     return (
-        <div className={`p-8 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
+        <div className={` ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
             <h2 className={`text-5xl font-semibold ${theme === 'dark' ? 'text-[#AEBCCF]' : 'text-[#34371f]'} text-left`}>
-                Yetenekler
+                {data?.skills?.title}
             </h2>
+
 
             <div className="flex gap-x-50 mt-8">
                 {data?.map((skill, index) => (
