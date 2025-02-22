@@ -1,4 +1,5 @@
 import React from 'react';
+import { Github, Linkedin } from 'lucide-react';
 import useFetch from '../hooks/useFetch';
 
 const Hero = () => {
@@ -23,15 +24,25 @@ const Hero = () => {
                         Hire Me
                     </button>
 
-                    <button className="py-2 px-6 text-lg font-semibold border border-[#3730A3] rounded-md text-[#3730A3] flex items-center space-x-2">
-                        <i className="fab fa-github"></i>
-                        Github
-                    </button>
+                    <a
+                        href="https://github.com/mustafa-bircan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2 px-6 text-lg font-semibold border border-[#3730A3] rounded-md text-[#3730A3] flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition"
+                    >
+                        <Github className="w-5 h-5" />
+                        <span>GitHub</span>
+                    </a>
 
-                    <button className="py-2 px-6 text-lg font-semibold border border-[#3730A3] rounded-md text-[#3730A3] flex items-center space-x-2">
-                        <i className="fab fa-linkedin"></i>
-                        LinkedIn
-                    </button>
+                    <a
+                        href="https://github.com/mustafa-bircan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2 px-6 text-lg font-semibold border border-[#3730A3] rounded-md text-[#3730A3] flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition"
+                    >
+                        <Linkedin className="w-5 h-5" />
+                        <span>LinkedIn</span>
+                    </a>
                 </div>
             </div>
 
