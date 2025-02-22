@@ -19,9 +19,11 @@ const Hero = () => {
                     <h2 className="text-xl font-medium text-[#3730A3] leading-tight">{hero.name || "Mustafa BİRCAN"}</h2>
                 </div>
 
-                <h3 className="text-[72px] font-bold text-[#1F2937]">{hero.heading || "Creative thinker\nMinimalism lover"}</h3>
+                <h3 className="text-[60px] leading-tight font-bold text-[#1F2937] ">{hero.heading || "Creative thinker"}</h3>
+                <h3 className="text-[60px] leading-tight font-bold text-[#1F2937]">{hero.heading2 || "Minimalism lover"}</h3>
 
-                <p className="text-[#6B7280] text-lg">{hero.aboutMe || "Hi, I’m Almila. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me."}</p>
+
+                <p className="text-[#6B7280] text-lg">{hero.aboutMe || "Hi, I’m Mustafa. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me."}</p>
 
                 <div className="flex space-x-4 mt-6">
                     <button className="py-2 px-6 text-lg font-semibold text-white bg-[#3730A3] rounded-md">
@@ -53,7 +55,7 @@ const Hero = () => {
                 <img
                     src={ppImage}
                     alt="Hero Image"
-                    className="max-w-[70%] max-h-[30%] object-contain rounded-[16px] shadow-lg"
+                    className="max-w-[60%] max-h-[50%] object-contain rounded-[16px] shadow-lg"
                 />
             </div>
 
