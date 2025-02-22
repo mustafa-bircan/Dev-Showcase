@@ -15,7 +15,7 @@ const Skills = () => {
                 Skills
             </h2>
 
-            <div className="flex gap-x-8 mt-8">
+            <div className="flex gap-x-50 mt-8">
                 {data?.map((skill, index) => (
                     <div key={index} className="w-1/3 text-left">
                         <h3 className={`text-3xl font-medium ${theme === 'dark' ? 'text-[#B7AAFF]' : 'text-[#4338CA]'} text-left`}>
@@ -28,7 +28,7 @@ const Skills = () => {
                 ))}
             </div>
 
-            <div className={`mt-20 mb-10 border-b-2 ${theme === 'dark' ? 'border-[#BAB2E]' : 'border-[#BAB2E7]'}`}></div>
+            <div className={`mt-15 mb-5 border-b-2 ${theme === 'dark' ? 'border-[#BAB2E]' : 'border-[#BAB2E7]'}`}></div>
         </div>
     );
 };

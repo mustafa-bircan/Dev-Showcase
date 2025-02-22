@@ -8,9 +8,9 @@ const Projects = () => {
     if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto">
             <h2 className="text-5xl font-bold text-left">Projects</h2>
-            <div className="flex justify-between mt-6">
+            <div className="flex justify-between mt-12">
                 {data.map((project, index) => (
                     <div key={index} className="w-1/3 px-4">
                         <img

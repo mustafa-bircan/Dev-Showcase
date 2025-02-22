@@ -21,24 +21,24 @@ const Profile = () => {
                     <div className="mt-4 space-y-4">
                         <div className="flex">
                             <p className="font-semibold text-lg">Doğum Tarihi</p>
-                            <p className="font-normal text-lg ml-2">{data?.birthDate}</p>
+                            <p className="font-normal text-lg ml-10">{data?.birthDate}</p>
                         </div>
 
                         <div className="flex">
                             <p className="font-semibold text-lg">İkamet Şehri</p>
-                            <p className="font-normal text-lg ml-2">{data?.city}</p>
+                            <p className="font-normal text-lg ml-12">{data?.city}</p>
                         </div>
 
                         <div className="flex">
                             <p className="font-semibold text-lg">Eğitim Durumu</p>
-                            <p className="font-normal text-lg ml-2">{data?.education}</p>
+                            <p className="font-normal text-lg ml-7.5">{data?.education}</p>
                         </div>
 
                         <div className="flex">
                             <p className="font-semibold text-lg">Tercih Ettiği Rol</p>
-                            <div className="font-normal text-lg ml-2">
+                            <div className="font-normal text-lg ml-6">
                                 {data?.preferredRoles?.map((role, index) => (
-                                    <span key={index} className="mr-4">{role}</span>
+                                    <span key={index} className="mr-2">{role}</span>
                                 ))}
                             </div>
                         </div>
@@ -58,7 +58,7 @@ const Profile = () => {
                 </div>
             </div>
 
-            <div className={`mt-20 mb-10 border-b-2 ${theme === 'dark' ? 'border-[#BAB2E]' : 'border-[#BAB2E7]'}`}></div>
+            <div className={`mt-15 mb-5 border-b-2 ${theme === 'dark' ? 'border-[#BAB2E]' : 'border-[#BAB2E7]'}`}></div>
         </div>
     );
 };

@@ -12,19 +12,19 @@ function App() {
   const { theme } = useTheme();
   const { language } = useLanguage();
 
-  const greeting = language === 'en' ? 'Welcome to my portfolio!' : 'Portföyüme hoş geldiniz!';
 
   return (
-    <div className={`min-h-screen pl-[20px] pr-[40px] pt-[10px] pb-[40px] ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
-      <Navbar />
-      <Header />
-      <Hero />
-      <Skills />
-      <Profile />
-      <Projects />
+    <>
+      <div className={`flex flex-col min-h-screen ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'} mt-5 ml-15 mr-30 mb-30`}>
+        <Navbar />
+        <Header />
+        <Hero />
+        <Skills />
+        <Profile />
+        <Projects />
+      </div>
       <Footer />
-      <h1>{greeting}</h1>
-    </div>
+    </>
   );
 }
 
