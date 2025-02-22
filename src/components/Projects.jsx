@@ -23,17 +23,36 @@ const Projects = () => {
 
                         <nav className="flex space-x-5">
                             <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50`}>
-                                Skills
+                                react
                             </button>
 
                             <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50`}>
-                                Projects
+                                redux
                             </button>
 
                             <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50`}>
-                                Hire Me
+                                axios
                             </button>
                         </nav>
+
+                        <div className="flex justify-between mt-4">
+                            <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline"
+                            >
+                                GitHub
+                            </a>
+                            <a
+                                href={project.siteUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline"
+                            >
+                                View Site
+                            </a>
+                        </div>
                     </div>
                 ))}
             </div>
