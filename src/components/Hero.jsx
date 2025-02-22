@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin } from 'lucide-react';
 import useFetch from '../hooks/useFetch';
+import ppImage from '../assets/pp.jpg';
 
 const Hero = () => {
     const { data, loading, error } = useFetch('/');
@@ -15,10 +16,13 @@ const Hero = () => {
             <div className="flex flex-col space-y-4">
                 <div className="flex items-center space-x-4">
                     <div className="w-16 h-1 bg-[#3730A3]"></div>
-                    <h2 className="text-2xl font-bold text-[#3730A3]">{hero.name || "Mustafa BİRCAN"}</h2>
+                    <h2 className="text-xl font-medium text-[#3730A3] leading-tight">{hero.name || "Mustafa BİRCAN"}</h2>
                 </div>
-                <h3 className="text-6xl font-bold text-[#1F2937]">{hero.heading || "Creative thinker Minimalism lover"}</h3>
-                <p className="text-[#6B7280] text-lg">{hero.aboutMe || "No description available."}</p>
+
+                <h3 className="text-[72px] font-bold text-[#1F2937]">{hero.heading || "Creative thinker\nMinimalism lover"}</h3>
+
+                <p className="text-[#6B7280] text-lg">{hero.aboutMe || "Hi, I’m Almila. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me."}</p>
+
                 <div className="flex space-x-4 mt-6">
                     <button className="py-2 px-6 text-lg font-semibold text-white bg-[#3730A3] rounded-md">
                         Hire Me
@@ -45,14 +49,15 @@ const Hero = () => {
                     </a>
                 </div>
             </div>
-
-            <div className="w-1/2">
+            <div className="w-1/2 flex justify-center items-center">
                 <img
-                    src="https://placehold.co/600x400"
+                    src={ppImage}
                     alt="Hero Image"
-                    className="w-full h-auto rounded-lg shadow-lg"
+                    className="max-w-[70%] max-h-[30%] object-contain rounded-[16px] shadow-lg"
                 />
             </div>
+
+
         </div>
     );
 };
