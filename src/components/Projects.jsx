@@ -5,7 +5,7 @@ const Projects = () => {
     const { data, loading, error } = useFetch("/", "projects");
 
     if (loading) return <p className="text-center text-gray-600">Loading...</p>;
-    if (error) return <p className="text-center text-red-500">Error: {error}</p>
+    if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -22,37 +22,33 @@ const Projects = () => {
                         <p className="text-gray-600 mb-4">{project.description}</p>
 
                         <nav className="flex space-x-5">
-                            <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50`}>
-                                react
-                            </button>
+                            <a
+                                href="https://react.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50"
+                            >
+                                React
+                            </a>
 
-                            <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50`}>
-                                redux
-                            </button>
+                            <a
+                                href="https://redux.js.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50"
+                            >
+                                Redux
+                            </a>
 
-                            <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50`}>
-                                axios
-                            </button>
+                            <a
+                                href="https://axios-http.com/docs/intro"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="py-2 px-4 text-lg font-semibold border-2 rounded-md border-opacity-50"
+                            >
+                                Axios
+                            </a>
                         </nav>
-
-                        <div className="flex justify-between mt-4">
-                            <a
-                                href={project.githubUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-600 underline"
-                            >
-                                GitHub
-                            </a>
-                            <a
-                                href={project.siteUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-600 underline"
-                            >
-                                View Site
-                            </a>
-                        </div>
                     </div>
                 ))}
             </div>
