@@ -5,9 +5,12 @@ import { useTheme } from "../context/ThemeContext";
 const Footer = () => {
     const { data, loading, error } = useFetch();
     const { theme } = useTheme();  // ThemeContext'i burada da kullanıyoruz
+    const { data, loading, error } = useFetch("/", "footer");
+    const { theme } = useTheme();
 
-    if (loading) return <div>Yükleniyor...</div>;
-    if (error) return <div>Hata: {error}</div>;
+    if (loading) return <p className="text-center text-gray-600">Loading...</p>;
+    if (error) return <p className="text-center text-red-500">Error: {error}</p>;
+
 
     return (
         <footer className={`py-8 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-[#F9F9F9] text-black'}`}>
@@ -18,7 +21,7 @@ const Footer = () => {
                         <span className="block mt-2">on your next product.</span>
                     </p>
                     <div className="flex items-center space-x-4">
-                        <FaHandPointRight className="text-yellow-500" size={24} />
+                        <FaHandPointRight className="text-yellow-500" size={25} />
                         <p className="text-lg text-[#AF0C48]">{data?.email}</p>
                     </div>
                 </div>
