@@ -7,7 +7,7 @@ const Navbar = () => {
     const { language, toggleLanguage } = useLanguage();
 
     return (
-        <nav className={`p-4 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
+        <nav className="p-4">
             <div className="flex justify-end items-center space-x-4">
                 <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -18,34 +18,34 @@ const Navbar = () => {
                         data-testid="darkMode-toggle"
                     />
                     <div
-                        className={`w-14 h-7 rounded-full flex items-center px-1 
-                        transition-all duration-300 ease-in-out
-                        ${theme === 'dark' ? 'bg-[#3A3A3A] justify-start' : 'bg-[#4731D3] justify-end'}`}
+                        className={`w-14 h-7 rounded-full flex items-center px-1 transition-all duration-300 ease-in-out
+                        ${theme === 'dark' ? 'bg-gray-700 justify-start' : 'bg-indigo-600 justify-end'}`}
                     >
-                        <div
-                            className="w-6 h-6 flex items-center justify-center 
-                            transition-transform duration-300 ease-in-out"
-                        >
+                        <div className="w-6 h-6 flex items-center justify-center transition-transform duration-300">
                             {theme === 'dark' ? (
-                                <FaMoon className="text-[#FFE86E] text-lg" />
+                                <FaMoon className="text-yellow-400 text-lg" />
                             ) : (
-                                <FaSun className="text-[#FFE86E] text-lg" />
+                                <FaSun className="text-yellow-400 text-lg" />
                             )}
                         </div>
                     </div>
                 </label>
 
-                <span className={`text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
-                    {theme === 'dark' ? 'AÇIK MOD' : 'KARANLIK MOD'}
+                <span
+                    className={`text-sm font-medium transition-all duration-300 
+                        ${theme === 'dark' ? 'font-bold text-[15px] text-[#D9D9D9]' : ''}`}
+                >
+                    {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
                 </span>
 
                 <span className="text-gray-500">|</span>
 
                 <button
                     onClick={toggleLanguage}
-                    className={`p-2 font-semibold transition-colors ${language === 'tr' ? 'text-blue-500' : 'text-black'}`}
+                    className={`p-2 font-semibold transition-colors
+                        ${theme === 'dark' ? 'text-[#BAB2E7]' : 'text-[#4731D3]'}`}
                 >
-                    {language === 'en' ? 'Türkçe' : 'English'}
+                    {language === 'en' ? "TÜRKÇE" : 'ENGLISH'}
                 </button>
             </div>
         </nav>
