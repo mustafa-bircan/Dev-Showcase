@@ -27,18 +27,24 @@ const Footer = () => {
                 <div className="flex space-x-8 items-center pt-30 pr-20">
                     <a
                         href={data?.personalBlogUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`text-lg font-medium hover:underline ${theme === 'dark' ? 'text-[#E1E1FF]' : 'text-[#0A0A14]'}`}
                     >
                         {data?.personalBlog}
                     </a>
                     <a
                         href={data?.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`text-lg font-medium hover:underline ${theme === 'dark' ? 'text-[#17D18B]' : 'text-[#00AB6B]'}`}
                     >
                         Github
                     </a>
                     <a
                         href={data?.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`text-lg font-medium hover:underline ${theme === 'dark' ? 'text-[#0BA6F6]' : 'text-[#0077B5]'}`}
                     >
                         Linkedin

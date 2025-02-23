@@ -60,7 +60,7 @@ const Hero = () => {
                 <img
                     src={ppImage}
                     alt="Hero Image"
-                    className="max-w-[60%] max-h-[50%] object-contain rounded-[16px] shadow-lg"
+                    className="w-full object-contain rounded-[16px] shadow-lg"
                 />
             </div>
         </div>
