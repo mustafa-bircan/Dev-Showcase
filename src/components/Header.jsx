@@ -1,8 +1,11 @@
 import React from 'react';
 import { useTheme } from "../context/ThemeContext";
+import useFetch from '../hooks/useFetch';
 
 const Header = () => {
+    const { data } = useFetch('/', 'header');
     const { theme } = useTheme();
+
 
     return (
         <header className={`flex justify-between items-center p-4 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
@@ -15,15 +18,15 @@ const Header = () => {
 
             <nav className="flex space-x-5">
                 <button className={`py-2 px-4 text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-[#6B7280]'} `}>
-                    Yetenekler
+                    {data?.hSkills}
                 </button>
 
                 <button className={`py-2 px-4 text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-[#6B7280]'} `}>
-                    Projeler
+                    {data?.hProjects}
                 </button>
 
                 <button className={`py-2 px-4 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'text-white border-white' : 'text-[#3730A3] border-[#3730A3]'} border-opacity-50`}>
-                    Beni İşe Alın
+                    {data?.hHireMe}
                 </button>
             </nav>
         </header>
