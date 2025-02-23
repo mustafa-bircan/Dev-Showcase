@@ -10,7 +10,7 @@ const Skills = () => {
     if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
     return (
-        <div className={` mt-16 ${theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-black"}`}>
+        <div id="skills-section" className="mt-16" >
             <h2 className={`text-5xl font-semibold ${theme === "dark" ? "text-[#AEBCCF]" : "text-[#34371f]"}`}>
                 {data?.title}
             </h2>

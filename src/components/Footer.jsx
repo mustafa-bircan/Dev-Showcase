@@ -7,7 +7,7 @@ const Footer = () => {
     const { theme } = useTheme();
 
     return (
-        <footer className={`w-full py-8 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-[#F9F9F9] text-black'} mt-auto`}>
+        <footer className="w-full py-8  mt-auto">
             <div className="container mx-auto flex justify-between items-center px-4">
                 <div className="flex flex-col items-start space-y-4 gap-20 pt-20 pb-20 pl-20">
                     <p className={`text-5xl font-semibold ${theme === 'dark' ? 'text-[#AEBCCF]' : 'text-black'}`}>

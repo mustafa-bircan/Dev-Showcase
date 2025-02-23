@@ -7,7 +7,7 @@ const Projects = () => {
     const { theme } = useTheme();
 
     return (
-        <div className="container mx-auto">
+        <div id="projects-section" className="container mx-auto">
             <h2 className={`text-5xl font-bold text-left ${theme === 'dark' ? 'text-[#AEBCCF]' : 'text-black'}`}>
                 {data?.projectT}
             </h2>
@@ -31,7 +31,7 @@ const Projects = () => {
                                 href="https://react.dev/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`py-1 px-3 text-sm font-medium border-2 rounded-md border-opacity-50 ${theme === 'dark' ? 'bg-[#383838] text-[#8F88FF]' : 'text-[#3730A3]'}`}
+                                className={`py-1 px-3 text-sm font-medium text-[#3730A3] border-2 rounded-md border-opacity-50 hover:bg-[#3730A3] hover:text-[#CFCBFF] ${theme === 'dark' ? 'bg-gray-900 text-[#8F88FF] hover:bg-[#CFCBFF] hover:text-black' : ''}`}
                             >
                                 React
                             </a>
@@ -40,7 +40,7 @@ const Projects = () => {
                                 href="https://redux.js.org/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`py-1 px-3 text-sm font-medium border-2 rounded-md border-opacity-50 ${theme === 'dark' ? 'bg-[#383838] text-[#8F88FF]' : 'text-[#3730A3]'}`}
+                                className={`py-1 px-3 text-sm font-medium text-[#3730A3] border-2 rounded-md border-opacity-50 hover:bg-[#3730A3] hover:text-[#CFCBFF] ${theme === 'dark' ? 'bg-gray-900 text-[#8F88FF] hover:bg-[#CFCBFF] hover:text-black' : ''}`}
                             >
                                 Redux
                             </a>
@@ -49,7 +49,7 @@ const Projects = () => {
                                 href="https://axios-http.com/docs/intro"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`py-1 px-3 text-sm font-medium border-2 rounded-md border-opacity-50 ${theme === 'dark' ? 'bg-[#383838] text-[#8F88FF]' : 'text-[#3730A3]'}`}
+                                className={`py-1 px-3 text-sm font-medium text-[#3730A3] border-2 rounded-md border-opacity-50 hover:bg-[#3730A3] hover:text-[#CFCBFF] ${theme === 'dark' ? 'bg-gray-900 text-[#8F88FF] hover:bg-[#CFCBFF] hover:text-black' : ''}`}
                             >
                                 Axios
                             </a>

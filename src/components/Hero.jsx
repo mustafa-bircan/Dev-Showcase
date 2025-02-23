@@ -38,21 +38,22 @@ const Hero = () => {
                         href="https://github.com/mustafa-bircan"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`py-2 px-6 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'bg-[#E1E1FF] text-black' : 'text-[#3730A3]'}  rounded-md flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
+                        className={`py-2 px-6 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'bg-[#E1E1FF] text-black' : 'text-[#3730A3]'} flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
                     >
-                        <Github className={`w-5 h-5 ${theme === 'dark' ? 'text-black' : ''}`} />
+                        <Github className={`w-5 h-5 ${theme === 'dark' ? 'text-black' : ''} hover:text-white`} />
                         <span>GitHub</span>
                     </a>
 
                     <a
-                        href="https://github.com/mustafa-bircan"
+                        href="https://www.linkedin.com/in/mustafa-bircan/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`py-2 px-6 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'bg-[#E1E1FF] text-black' : 'text-[#3730A3]'}  rounded-md flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
+                        className={`py-2 px-6 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'bg-[#E1E1FF] text-black' : 'text-[#3730A3]'} flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
                     >
-                        <Linkedin className={`w-5 h-5 ${theme === 'dark' ? 'text-black' : ''}`} />
+                        <Linkedin className={`w-5 h-5 ${theme === 'dark' ? 'text-black' : ''} hover:text-white`} />
                         <span>LinkedIn</span>
                     </a>
+
                 </div>
             </div>
             <div className="w-1/2 flex justify-center items-center">

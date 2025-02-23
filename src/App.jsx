@@ -11,7 +11,7 @@ function App() {
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} min-h-screen`}>
+    <div className={`${theme === 'dark' ? 'bg-gray-900' : 'bg-white'} min-h-screen`}>
       <div className="flex flex-col ml-20 mr-30 mb-30">
         <Navbar />
         <Header />
@@ -20,7 +20,7 @@ function App() {
         <Profile />
         <Projects />
       </div>
-      <div className={`${theme === 'dark' ? 'bg-[#141414]' : 'bg-white'}`}>
+      <div className={`${theme === 'dark' ? 'bg-[#141414]' : 'bg-[#F9F9F9]'}`}>
         <Footer />
       </div>
     </div>
