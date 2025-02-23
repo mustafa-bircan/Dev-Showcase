@@ -30,7 +30,7 @@ const Hero = () => {
                 </p>
 
                 <div className="flex space-x-4 mt-6">
-                    <button className={`py-2 px-6 text-lg font-semibold ${theme === 'dark' ? 'bg-[#E1E1FF] text-[#000000]' : 'bg-[#3730A3] text-white'} rounded-md`}>
+                    <button className={`py-2 px-6 text-lg font-semibold ${theme === 'dark' ? 'bg-[#E1E1FF] text-black' : 'bg-[#3730A3] text-white'} rounded-md`}>
                         {data?.heroHire}
                     </button>
 
@@ -38,9 +38,9 @@ const Hero = () => {
                         href="https://github.com/mustafa-bircan"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`py-2 px-6 text-lg font-semibold ${theme === 'dark' ? 'bg-[#383838] text-[#E1E1FF]' : 'bg-[#3730A3] text-[#3730A3]'}  rounded-md flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
+                        className={`py-2 px-6 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'bg-[#E1E1FF] text-black' : 'text-[#3730A3]'}  rounded-md flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
                     >
-                        <Github className={`w-5 h-5 ${theme === 'dark' ? 'text-[#BAB2E7]' : ''}`} />
+                        <Github className={`w-5 h-5 ${theme === 'dark' ? 'text-black' : ''}`} />
                         <span>GitHub</span>
                     </a>
 
@@ -48,9 +48,9 @@ const Hero = () => {
                         href="https://github.com/mustafa-bircan"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`py-2 px-6 text-lg font-semibold ${theme === 'dark' ? 'bg-[#383838] text-[#E1E1FF]' : 'bg-[#3730A3] text-[#3730A3]'}  rounded-md flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
+                        className={`py-2 px-6 text-lg font-semibold border-2 rounded-md ${theme === 'dark' ? 'bg-[#E1E1FF] text-black' : 'text-[#3730A3]'}  rounded-md flex items-center space-x-2 hover:bg-[#3730A3] hover:text-white transition`}
                     >
-                        <Linkedin className={`w-5 h-5 ${theme === 'dark' ? 'text-[#BAB2E7]' : ''}`} />
+                        <Linkedin className={`w-5 h-5 ${theme === 'dark' ? 'text-black' : ''}`} />
                         <span>LinkedIn</span>
                     </a>
                 </div>
