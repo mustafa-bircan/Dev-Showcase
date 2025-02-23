@@ -20,7 +20,9 @@ function App() {
         <Profile />
         <Projects />
       </div>
-      <Footer />
+      <div className={`${theme === 'dark' ? 'bg-[#141414]' : 'bg-white'}`}>
+        <Footer />
+      </div>
     </div>
   );
 }
