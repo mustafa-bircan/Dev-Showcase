@@ -3,11 +3,8 @@ import { useTheme } from "../context/ThemeContext";
 import useFetch from '../hooks/useFetch';
 
 const Profile = () => {
+    const { data } = useFetch("/", "profile");
     const { theme } = useTheme();
-    const { data, loading, error } = useFetch("/", "profile");
-
-    if (loading) return <p className="text-center text-gray-600">Loading...</p>;
-    if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
     return (
         <div className={`${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
@@ -48,12 +45,13 @@ const Profile = () => {
                 <div className="w-1/2">
                     <h3 className={`text-3xl font-medium ${theme === 'dark' ? 'text-[#B7AAFF]' : 'text-[#4338CA]'}`}>{data?.about}</h3>
                     <div className="mt-4">
-                        <p className="font-normal text-lg mb-6 text-[#6B7280]">
-                            {data?.aboutMe || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+                        <p className={`font-normal text-lg mb-6 ${theme === 'dark' ? 'text-[#FFFFFF]' : 'text-[#6B7280]'}`}>
+                            {data?.aboutMe}
                         </p>
-                        <p className="font-normal text-lg text-[#6B7280]">
-                            {data?.aboutMe2 || 'Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!'}
+                        <p className={`font-normal text-lg ${theme === 'dark' ? 'text-[#FFFFFF]' : 'text-[#6B7280]'}`}>
+                            {data?.aboutMe2}
                         </p>
+
                     </div>
                 </div>
             </div>
