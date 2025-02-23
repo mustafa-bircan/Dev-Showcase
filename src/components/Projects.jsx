@@ -9,17 +9,17 @@ const Projects = () => {
 
     return (
         <div className="container mx-auto">
-            <h2 className="text-5xl font-bold text-left">Projeler</h2>
+            <h2 className="text-5xl font-bold text-left">{data?.projectT}</h2>
             <div className="flex justify-between gap-5 mt-12">
-                {data.map((project, index) => (
+                {data?.items?.map((project, index) => (
                     <div key={index} className="w-1/3 px-4">
                         <img
-                            src={project.imageUrl}
-                            alt={project.title}
+                            src={project?.imageUrl}
+                            alt={project?.title}
                             className="w-full h-auto mb-4"
                         />
-                        <h3 className="text-3xl font-semibold mb-2 text-[#4338CA]">{project.title}</h3>
-                        <p className="text-sm font-normal text-[#6B7280] mb-4">{project.description}</p>
+                        <h3 className="text-3xl font-semibold mb-2 text-[#4338CA]">{project?.title}</h3>
+                        <p className="text-sm font-normal text-[#6B7280] mb-4">{project?.description}</p>
 
                         <nav className="flex space-x-5">
                             <a
@@ -52,7 +52,7 @@ const Projects = () => {
 
                         <div className="mt-4 flex justify-between">
                             <a
-                                href={project.githubUrl}
+                                href={project?.githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-base font-medium text-[#3730A3] underline"
@@ -61,12 +61,12 @@ const Projects = () => {
                             </a>
 
                             <a
-                                href={project.siteUrl}
+                                href={project?.siteUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-base font-medium text-[#3730A3] underline"
                             >
-                                Siteyi Görüntüle
+                                {data?.siteView}
                             </a>
                         </div>
                     </div>
