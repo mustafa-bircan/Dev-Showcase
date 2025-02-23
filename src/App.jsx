@@ -1,5 +1,4 @@
 import { useTheme } from './context/ThemeContext';
-import { useLanguage } from './context/LanguageContext';
 import Navbar from './components/NavBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -10,12 +9,10 @@ import Footer from './components/Footer';
 
 function App() {
   const { theme } = useTheme();
-  const { language } = useLanguage();
-
 
   return (
-    <>
-      <div className={`flex flex-col min-h-screen ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'} mt-5 ml-20 mr-30 mb-30`}>
+    <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} min-h-screen`}>
+      <div className="flex flex-col ml-20 mr-30 mb-30">
         <Navbar />
         <Header />
         <Hero />
@@ -24,7 +21,7 @@ function App() {
         <Projects />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
