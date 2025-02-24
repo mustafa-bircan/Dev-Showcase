@@ -73,7 +73,7 @@ const Profile = () => {
                 </div>
             </div>
 
-            <div className={`mt-12 mb-12 border-b-2 ${theme === 'dark' ? 'border-[#BAB2E]' : 'border-[#BAB2E7]'}`}></div>
+            <div className={`mt-12 mb-12 border-b-2 ${theme === 'dark' ? 'border-[#BAB2E7]' : 'border-[#BAB2E7]'}`}></div>
         </div>
     );
 };
