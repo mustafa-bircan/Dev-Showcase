@@ -33,10 +33,13 @@ const Navbar = () => {
 
                 <span
                     className={`text-sm font-medium transition-all duration-300 
-                        ${theme === 'dark' ? 'font-bold text-[15px] text-[#D9D9D9]' : ''}`}
+                    ${theme === 'dark' ? 'font-bold text-[15px] text-[#D9D9D9]' : ''}`}
                 >
-                    {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
+                    {language === 'en'
+                        ? (theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE')
+                        : (theme === 'dark' ? 'AÇIK TEMA' : 'KARANLIK TEMA')}
                 </span>
+
 
                 <span className="text-gray-500">|</span>
 
